@@ -1,0 +1,21 @@
+{
+  "name": "crowdfunding-app",
+  "version": "1.0.0",
+  "description": "Crowdfunding web application",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run admin\" \"npm run client\" \"npm run server\"",
+    "admin": "node adminside/adminserver.js",
+    "client": "node clientside/crowdfundings.js",
+    "server": "node serverside/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "concurrently": "^5.3.0"
+  }
+}
